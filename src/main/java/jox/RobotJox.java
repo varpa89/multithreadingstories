@@ -2,15 +2,15 @@ package jox;
 
 public class RobotJox {
     private final Leg rightLeg;
-    private final Leg leftHtLeg;
+    private final Leg lefttLeg;
 
     private RobotJox(Distance distance) {
         this.rightLeg = new Leg("rightLeg", distance);
-        this.leftHtLeg = new Leg("leftLeg", distance);
+        this.lefttLeg = new Leg("leftLeg", distance);
     }
 
     private void go() {
-        new Thread(this.leftHtLeg, this.leftHtLeg.getName()).start();
+        new Thread(this.lefttLeg, this.lefttLeg.getName()).start();
         new Thread(this.rightLeg, this.rightLeg.getName()).start();
     }
 
