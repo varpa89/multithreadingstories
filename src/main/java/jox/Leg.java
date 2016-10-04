@@ -7,18 +7,11 @@ import java.util.logging.Logger;
  * @author p.varchenko
  * @since 04.10.16
  */
-public class Leg implements Runnable{
+public class Leg extends AbstractLeg implements Runnable{
     private Logger logger = Logger.getLogger(Leg.class.getName());
-    private final String name;
-    private final RouteData routeData;
 
     Leg(String name, RouteData routeData) {
-        this.name = name;
-        this.routeData = routeData;
-    }
-
-    public String getName() {
-        return this.name;
+        super(name, routeData);
     }
 
     @Override

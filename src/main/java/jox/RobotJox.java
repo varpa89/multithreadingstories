@@ -14,7 +14,6 @@ public class RobotJox {
         new Thread(this.rightLeg, this.rightLeg.getName()).start();
     }
 
-
     public static void main(String[] args) {
         RouteData routeData = new RouteData(100);
         RobotJox robot = new RobotJox(routeData);
