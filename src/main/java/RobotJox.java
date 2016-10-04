@@ -20,9 +20,8 @@ public class RobotJox {
         private int traveledDistance = 0;
         private String lastLeg;
 
-        Distance(int targetDistance, String lastLeg) {
+        Distance(int targetDistance) {
             this.targetDistance = targetDistance;
-            this.lastLeg = lastLeg;
         }
 
         String getLastLeg() {
@@ -75,7 +74,7 @@ public class RobotJox {
                         break;
                     }
                     int stepDistance = (int) (1 + Math.random() * this.distance.getDistanceToGo());
-                    if (!this.distance.getLastLeg().equals(this.getName())) {
+                    if (!this.getName().equals(this.distance.getLastLeg())) {
                         this.distance.setLastLeg(this.getName());
                         logger.info(Thread.currentThread().getName() + " start to going " + stepDistance + " meters");
                         try {
@@ -98,7 +97,7 @@ public class RobotJox {
 
 
     public static void main(String[] args) {
-        Distance distance = new Distance(100, "rightLeg");
+        Distance distance = new Distance(100);
         RobotJox robot = new RobotJox(distance);
         robot.go();
     }
