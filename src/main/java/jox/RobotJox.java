@@ -4,9 +4,9 @@ public class RobotJox {
     private final Leg rightLeg;
     private final Leg leftLeg;
 
-    private RobotJox(Distance distance) {
-        this.rightLeg = new Leg("rightLeg", distance);
-        this.leftLeg = new Leg("leftLeg", distance);
+    private RobotJox(RouteData routeData) {
+        this.rightLeg = new Leg("rightLeg", routeData);
+        this.leftLeg = new Leg("leftLeg", routeData);
     }
 
     private void go() {
@@ -16,8 +16,8 @@ public class RobotJox {
 
 
     public static void main(String[] args) {
-        Distance distance = new Distance(100);
-        RobotJox robot = new RobotJox(distance);
+        RouteData routeData = new RouteData(100);
+        RobotJox robot = new RobotJox(routeData);
         robot.go();
     }
 }

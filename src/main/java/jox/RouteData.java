@@ -6,13 +6,13 @@ import java.util.logging.Logger;
  * @author p.varchenko
  * @since 04.10.16
  */
-public class Distance {
-    private Logger logger = Logger.getLogger(Distance.class.getName());
+public class RouteData {
+    private Logger logger = Logger.getLogger(RouteData.class.getName());
     private final int targetDistance;
     private int traveledDistance = 0;
     private String lastLeg;
 
-    Distance(int targetDistance) {
+    RouteData(int targetDistance) {
         this.targetDistance = targetDistance;
     }
 
