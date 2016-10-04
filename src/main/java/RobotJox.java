@@ -1,13 +1,13 @@
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class RobotJax {
+public class RobotJox {
 
     private final Distance distance;
     private final Leg rightLeg;
     private final Leg leftHtLeg;
 
-    private RobotJax(Distance distance) {
+    private RobotJox(Distance distance) {
         this.distance = distance;
         this.rightLeg = new Leg("rightLeg", distance);
         this.leftHtLeg = new Leg("leftLeg", distance);
@@ -69,9 +69,9 @@ public class RobotJax {
 
         @Override
         public void run() {
-            while (!distance.finish()) {
+            while (true) {
                 synchronized (this.distance) {
-                    if(distance.finish()){
+                    if (distance.finish()) {
                         break;
                     }
                     int stepDistance = (int) (1 + Math.random() * this.distance.getDistanceToGo());
@@ -99,7 +99,7 @@ public class RobotJax {
 
     public static void main(String[] args) {
         Distance distance = new Distance(100, "rightLeg");
-        RobotJax robot = new RobotJax(distance);
+        RobotJox robot = new RobotJox(distance);
         robot.go();
     }
 }
