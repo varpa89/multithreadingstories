@@ -25,8 +25,8 @@ public class RobotJox {
         Leg leftLeg;
 
         //Broken solution
-        rightLeg = new BrokenLeg(RIGHT_LEG_NAME, routeData);
-        leftLeg = new BrokenLeg(LEFT_LEG_NAME, routeData);
+        //rightLeg = new BrokenLeg(RIGHT_LEG_NAME, routeData);
+        //leftLeg = new BrokenLeg(LEFT_LEG_NAME, routeData);
 
         //Synchronized solution
         //rightLeg = new SyncLeg(RIGHT_LEG_NAME, routeData);

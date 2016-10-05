@@ -22,10 +22,7 @@ public class ReentrantLockLeg extends AbstractLeg {
                 if (routeData.finish()) {
                     break;
                 }
-                int stepDistance = (int) (1 + Math.random() * this.routeData.getDistanceToGo());
-                if (!this.getName().equals(this.routeData.getLastLeg())) {
-                    makeStep(stepDistance);
-                }
+                checkAndMakeStep();
             } finally {
                 lock.unlock();
             }
