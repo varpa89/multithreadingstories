@@ -1,7 +1,5 @@
 package jox;
 
-import java.util.logging.Logger;
-
 /**
  * @author p.varchenko
  * @since 05.10.16
