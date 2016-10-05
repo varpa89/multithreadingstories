@@ -26,12 +26,13 @@ public class RouteData {
 
     void addInterval(int interval) {
 
-        int distanceToGo = this.targetDistance - this.traveledDistance;
+        int distanceToGoBefore = this.targetDistance - this.traveledDistance;
         if (this.traveledDistance + interval > this.targetDistance) {
-            throw new IllegalArgumentException("Interval could not be grater than distance to go. Interval " + interval + ", distance to go is " + distanceToGo);
+            throw new IllegalArgumentException("Interval could not be grater than distance to go. Interval " + interval + ", distance to go is " + distanceToGoBefore);
         }
         this.traveledDistance = this.traveledDistance + interval;
-        logger.info("Distance to go: " + distanceToGo);
+        int distanceToGoAfter = this.targetDistance - this.traveledDistance;
+        logger.info("Distance to go: " + distanceToGoAfter);
     }
 
     int getDistanceToGo() {
