@@ -4,9 +4,9 @@ public class RobotJox {
     private final Leg rightLeg;
     private final Leg leftLeg;
 
-    private RobotJox(RouteData routeData) {
-        this.rightLeg = new Leg("rightLeg", routeData);
-        this.leftLeg = new Leg("leftLeg", routeData);
+    private RobotJox(Leg rightLeg, Leg leftLeg) {
+        this.rightLeg = rightLeg;
+        this.leftLeg = leftLeg;
     }
 
     private void go() {
@@ -15,8 +15,24 @@ public class RobotJox {
     }
 
     public static void main(String[] args) {
+
         RouteData routeData = new RouteData(100);
-        RobotJox robot = new RobotJox(routeData);
+        final String RIGHT_LEG_NAME = "rightLeg";
+        final String LEFT_LEG_NAME = "leftLeg";
+        Leg rightLeg;
+        Leg leftLeg;
+
+
+        //Broken solution
+        rightLeg = new BrokenLeg(RIGHT_LEG_NAME, routeData);
+        leftLeg = new BrokenLeg(LEFT_LEG_NAME, routeData);
+
+        //Synchronized solution
+        //rightLeg = new SyncLeg(RIGHT_LEG_NAME, routeData);
+        //leftLeg = new SyncLeg(LEFT_LEG_NAME, routeData);
+
+
+        RobotJox robot = new RobotJox(rightLeg, leftLeg);
         robot.go();
     }
 }
