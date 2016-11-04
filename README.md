@@ -1,2 +1,2 @@
 # multithreadingstories
-TODO: non blicking (see elizarov roman talk from jpoint)
+TODO: non blocking (see elizarov roman talk from jpoint)
