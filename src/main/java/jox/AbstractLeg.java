@@ -11,7 +11,6 @@ abstract class AbstractLeg implements Leg {
     private final String name;
     final RouteData routeData;
     private Logger logger = Logger.getLogger(AbstractLeg.class.getName());
-    ;
 
     AbstractLeg(String name, RouteData routeData) {
         this.name = name;

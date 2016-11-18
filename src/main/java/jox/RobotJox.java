@@ -18,7 +18,7 @@ public class RobotJox {
 
     public static void main(String[] args) {
 
-        RouteData routeData = new RouteData(100);
+        RouteData routeData = new RouteData(1000);
         final String RIGHT_LEG_NAME = "rightLeg";
         final String LEFT_LEG_NAME = "leftLeg";
         Leg rightLeg;
