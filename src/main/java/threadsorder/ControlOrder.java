@@ -1,8 +1,6 @@
 package threadsorder;
 
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author Pavel S Varchenko
